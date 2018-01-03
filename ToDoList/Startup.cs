@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using ToDoList.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ToDoList
 {
