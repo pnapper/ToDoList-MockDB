@@ -5,21 +5,24 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 namespace ToDoList.Controllers
 {
-    public class ItemsController : Controller
+    public class CategoriesController : Controller
     {
         private ToDoListContext db = new ToDoListContext();
 
         public IActionResult Index()
         {
-            return View(db.Items.Include(items => items.Category).ToList());
+            List<Category> model = db.Categories.ToList();
+            return View();
         }
 
         public IActionResult Details(int id)
         {
-            Item thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
-            return View(thisItem);
+            Category thisCategory = db.Categories.FirstOrDefault(categories => categories.CategoryId == id);
+            return View(thisCategory);
         }
 
         public IActionResult Create()
