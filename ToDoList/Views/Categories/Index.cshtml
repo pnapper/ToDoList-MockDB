@@ -1,20 +1,39 @@
 ﻿@model IEnumerable<ToDoList.Models.Category>
 
-<html>
-<head>
-    <title>To Do List</title>
-</head>
-<body>
-    <h2>Category List</h2>
-    <!--<h4>@Html.DisplayNameFor(model => model.Name)</h4>
-    <ul>
-        @foreach(var listCategory in Model)
-        {
-            @Html.DisplayFor(modelCategory => listCategory.Name) |
-            @Html.ActionLink("Details", "Details", new { id = listCategory.CategoryId })
-        }
-    </ul>-->
+@{
+    ViewData["Title"] = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>To Do List</h2>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
 
-    <p>@Html.ActionLink("Add new category", "Create")</p>
-</body>
-</html>
+    @foreach (var listCategory in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelCategory => listCategory.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelCategory => listCategory.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = listCategory.CategoryId }) |
+                @Html.ActionLink("Details", "Details", new { id = listCategory.CategoryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = listCategory.CategoryId })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Create New Category", "Create")
+</p>

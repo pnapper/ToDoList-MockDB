@@ -1,7 +1,7 @@
-﻿@model ToDoList.Models.Item
+﻿@model ToDoList.Models.Category
 
 @{
-    ViewData["Title"] = "Item - Create";
+    ViewData["Title"] = "Category - Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Create a new item</h2>
@@ -9,11 +9,9 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
 
-    @Html.LabelFor(model => model.CategoryId)
-    @Html.DropDownList("CategoryId")
 
     <input type="submit" value="Create" class="btn btn-default" />
 }
