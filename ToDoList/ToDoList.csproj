@@ -13,6 +13,7 @@
     <Folder Include="Views\Items\" />
     <Folder Include="Views\Categories\" />
     <Folder Include="Views\Shared\" />
+    <Folder Include="Models\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

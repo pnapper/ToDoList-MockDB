@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{64A74BF0-FE0F-4289-91D0-8FCA420FFB12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.Tests", "ToDoList.Tests\ToDoList.Tests.csproj", "{8EB78C19-023B-432E-AC6D-E40AD4DD26DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{64A74BF0-FE0F-4289-91D0-8FCA420FFB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64A74BF0-FE0F-4289-91D0-8FCA420FFB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64A74BF0-FE0F-4289-91D0-8FCA420FFB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB78C19-023B-432E-AC6D-E40AD4DD26DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB78C19-023B-432E-AC6D-E40AD4DD26DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB78C19-023B-432E-AC6D-E40AD4DD26DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB78C19-023B-432E-AC6D-E40AD4DD26DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
